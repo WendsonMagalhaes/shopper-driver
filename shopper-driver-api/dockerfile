@@ -10,6 +10,9 @@ COPY package*.json ./
 # Instale as dependências do projeto
 RUN npm install
 
+# Instale o pacote @types/node para fornecer definições de tipo para o Node.js
+RUN npm install --save-dev @types/node
+
 # Instale o nodemon e ts-node globalmente
 RUN npm install -g nodemon ts-node
 
