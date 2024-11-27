@@ -130,7 +130,7 @@ const RideRequest: React.FC = () => {
 
     return (
         <div className="container">
-            <h1>Solicite Sua Viagem</h1>
+            <h1>Solicite sua Viagem</h1>
             <form onSubmit={handleEstimate}>
                 <div className="input-group">
                     <div className="input-icon">
@@ -184,7 +184,7 @@ const RideRequest: React.FC = () => {
                     disabled={isLoading}
                     className="button-submit"
                 >
-                    {isLoading ? 'Carregando...' : 'Estimar Viagem'}
+                    {isLoading ? 'Carregando...' : 'Procurar'}
                 </button>
             </form>
             {errorMessage && <ErrorModal message={errorMessage} onClose={closeModal} />}

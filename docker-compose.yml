@@ -5,7 +5,7 @@ services:
     image: shopper-driver-api:latest
     build:
       context: ./shopper-driver-api
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     command: npm run dev
     volumes:
       - ./shopper-driver-api:/app
@@ -18,7 +18,7 @@ services:
     image: shopper-driver-web:latest
     build:
       context: ./shopper-driver-web
-      dockerfile: Dockerfile
+      dockerfile: dockerfile
     ports:
       - "80:80"
 

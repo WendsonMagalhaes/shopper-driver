@@ -148,6 +148,7 @@ button {
     margin-top: auto;
     font-size: var(--font-size);
     transition: background-color var(--transition-speed) ease;
+    font-size: 18px;
 }
 
 button:hover {

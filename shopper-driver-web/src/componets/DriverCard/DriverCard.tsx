@@ -59,7 +59,7 @@ const DriverCard: React.FC<DriverCardProps> = ({ driver, handleConfirmRide }) =>
             </div>
             <div className="confirm-ride">
                 <button className="button-driver-card" onClick={() => handleConfirmRide(driver.id, driver.name, driver.value)}>
-                    Escolher
+                    Iniciar
                 </button>
             </div>
         </div>
