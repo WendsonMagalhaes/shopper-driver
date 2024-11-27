@@ -21,7 +21,7 @@ const estimateRide = async (req, res) => {
     }
     try {
         const googleApiKey = process.env.GOOGLE_API_KEY;
-        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&key=${googleApiKey}`;
+        const url = `https://maps.googleapis.com/maps/api/directions/json?origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&key=${googleApiKey}&language=pt-BR`;
         const routeResponseData = await axios_1.default.get(url);
         const routeResponse = routeResponseData.data.routes[0];
         const distance = routeResponse.legs[0].distance.value;
@@ -51,7 +51,6 @@ const estimateRide = async (req, res) => {
 };
 exports.estimateRide = estimateRide;
 const confirmRide = async (req, res) => {
-    // Validar todos os dados da requisição
     const validationError = (0, rideService_1.validateRideData)(req.body);
     if (validationError) {
         res.status(400).json({

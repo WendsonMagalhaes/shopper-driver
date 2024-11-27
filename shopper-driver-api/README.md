@@ -268,5 +268,5 @@ Este endpoint permite listar as viagens realizadas por um determinado cliente, p
 Testes unitários são fundamentais para garantir a qualidade do código. Para rodar os testes, execute:
 
 ```bash
-npm run test
+npx jest
 ```

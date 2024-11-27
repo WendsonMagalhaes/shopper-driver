@@ -116,7 +116,7 @@ const calculateDriverOptions = async (distance) => {
     try {
         const drivers = await db.all('SELECT * FROM drivers');
         const options = drivers
-            .filter((driver) => distance / 100 >= driver.min_km)
+            .filter((driver) => (distance / 1000) >= driver.min_km)
             .map((driver) => ({
             id: driver.id,
             name: driver.name,
@@ -180,7 +180,6 @@ const saveRide = async (rideData) => {
             rideData.driver_name,
             rideData.value,
         ]);
-        console.log('Viagem salva com sucesso!');
     }
     catch (error) {
         console.error('Erro ao salvar viagem:', error);
