@@ -8,7 +8,11 @@
     "skipLibCheck": true,
     "strict": true,
     "types": [
-      "node"
+      "node",
+      "express",
+      "body-parser",
+      "cors",
+      "dotenv"
     ],
     "forceConsistentCasingInFileNames": true
   },
