@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6e490e78.css",
+    "main.js": "/static/js/main.1b952797.js",
+    "static/js/453.48f44178.chunk.js": "/static/js/453.48f44178.chunk.js",
+    "static/media/Dodge.webp": "/static/media/Dodge.d87628b3bdf29d949e4a.webp",
+    "static/media/Dominic Toretto.webp": "/static/media/Dominic Toretto.1e8640f86425f9f6b191.webp",
+    "static/media/James Bond.webp": "/static/media/James Bond.3d9edb810a94decad939.webp",
+    "static/media/Plymouth.webp": "/static/media/Plymouth.fc1ee10de336135fa345.webp",
+    "static/media/Homer Simpson.webp": "/static/media/Homer Simpson.1d125df0676fa7423026.webp",
+    "static/media/Aston.webp": "/static/media/Aston.16f64ca5e49eae5cf9e5.webp",
+    "static/media/car_default.webp": "/static/media/car_default.e150eac43411b8486283.webp",
+    "static/media/car_driver.webp": "/static/media/car_driver.933e44f930167680fca2.webp",
+    "index.html": "/index.html",
+    "main.6e490e78.css.map": "/static/css/main.6e490e78.css.map",
+    "main.1b952797.js.map": "/static/js/main.1b952797.js.map",
+    "453.48f44178.chunk.js.map": "/static/js/453.48f44178.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e490e78.css",
+    "static/js/main.1b952797.js"
+  ]
+}
