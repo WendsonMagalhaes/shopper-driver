@@ -13,6 +13,9 @@ RUN npm install
 # Instale o pacote @types/node para fornecer definições de tipo para o Node.js
 RUN npm install --save-dev @types/node
 
+# Instale as dependências de tipos do express, body-parser, cors, dotenv
+RUN npm install --save-dev @types/express @types/body-parser @types/cors @types/dotenv
+
 # Instale o nodemon e ts-node globalmente
 RUN npm install -g nodemon ts-node
 
