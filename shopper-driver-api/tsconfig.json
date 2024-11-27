@@ -12,7 +12,8 @@
       "express",
       "body-parser",
       "cors",
-      "dotenv"
+      "dotenv",
+      "jest"
     ],
     "forceConsistentCasingInFileNames": true
   },

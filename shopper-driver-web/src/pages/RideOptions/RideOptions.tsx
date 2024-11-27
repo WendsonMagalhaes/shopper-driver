@@ -44,10 +44,8 @@ const RideOptions: React.FC = () => {
             navigate('/ride-history');
         } catch (error) {
             if (error instanceof AxiosError) {
-                if (error.response && error.response.data && error.response.data.error_description) {
-                    console.error('Erro ao confirmar viagem:', error.response.data.error_description);
+                if (error?.response?.data?.error_description) {
                     setErrorMessage(error.response.data.error_description);
-
 
                 } else {
                     setErrorMessage('Ocorreu um erro ao confirmar a viagem. Tente novamente.');
@@ -62,29 +60,12 @@ const RideOptions: React.FC = () => {
     };
     if (!options || !origin || !destination) return <p>Carregando...</p>;
 
-    function translateDuration(duration: string): string {
-        if (!duration) return "";
-
-        const translations = {
-            day: "dia",
-            days: "dias",
-            hour: "hora",
-            hours: "horas",
-            minute: "minuto",
-            minutes: "minutos",
-        };
-
-        return duration
-            .replace(/day(s?)/g, (_, plural: string) => (plural ? "dias" : "dia"))
-            .replace(/hour(s?)/g, (_, plural: string) => (plural ? "horas" : "hora"))
-            .replace(/minute(s?)/g, (_, plural: string) => (plural ? "minutos" : "minuto"));
-    }
 
     return (
         <div className="ride-options-container">
             <section className="top-section">
                 <div className="route-info">
-                    {routeResponse && routeResponse.legs.length > 0 && (
+                    {routeResponse?.legs?.length > 0 && (
                         <div>
                             <h2>Informações da Rota</h2>
                             <div className="origin-destination">
@@ -115,7 +96,7 @@ const RideOptions: React.FC = () => {
                                     <span className="input-label">Duração:</span>
                                     <i className="fas fa-clock input-icon-options-02"></i>
                                     <div className="input-content">
-                                        <p>{translateDuration(duration)}</p>
+                                        <p>{(duration)}</p>
                                     </div>
                                 </label>
                             </div>

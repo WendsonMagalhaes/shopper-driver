@@ -106,8 +106,7 @@ const RideRequest: React.FC = () => {
         } catch (error) {
 
             if (error instanceof AxiosError) {
-                if (error.response && error.response.data && error.response.data.error_description) {
-                    console.error('Erro ao estimar viagem:', error.response.data.error_description);
+                if (error?.response?.data?.error_description) {
                     setErrorMessage(error.response.data.error_description);
 
 

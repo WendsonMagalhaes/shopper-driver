@@ -19,8 +19,7 @@ const RideHistory: React.FC = () => {
     const handleFilter = async () => {
 
         const { custumerId, driverId } = filters;
-        console.log(custumerId);
-        if (custumerId === "") {
+        if (!custumerId) {
             setErrorMessage('O ID do usuário é obrigatório.');
         } else {
 
@@ -33,10 +32,8 @@ const RideHistory: React.FC = () => {
             } catch (error) {
 
                 if (error instanceof AxiosError) {
-                    if (error.response && error.response.data && error.response.data.error_description) {
-                        console.error('Erro ao buscar histórico de viagens:', error.response.data.error_description);
+                    if (error?.response?.data?.error_description) {
                         setErrorMessage(error.response.data.error_description);
-
 
                     } else {
                         setErrorMessage('Ocorreu um erro ao buscar histórico de viagens. Tente novamente.');
