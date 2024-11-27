@@ -7,8 +7,7 @@ services:
       context: ./shopper-driver-api
       dockerfile: dockerfile
     command: npm run dev
-    volumes:
-      - ./shopper-driver-api:/app
+
     ports:
       - "8080:8080"
     environment:

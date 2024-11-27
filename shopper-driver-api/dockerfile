@@ -5,19 +5,14 @@ FROM node:16 AS build
 WORKDIR /app
 
 # Copie apenas os arquivos package*.json (evita copiar arquivos desnecessários inicialmente)
-COPY package.json ./
+COPY package*.json ./
 
 # Instale as dependências do projeto
 RUN npm install && \
     npm install --save-dev @types/node @types/express @types/body-parser @types/cors @types/dotenv @types/axios && \
     npm install -g nodemon ts-node
-
-
 # Copie o restante do código fonte (após instalar as dependências para aproveitar o cache do Docker)
 COPY . .
-
-# Instale o pacote @types/node para fornecer definições de tipo para o Node.js
-RUN npm install --save-dev @types/node
 
 # Instale as dependências de tipos do express, body-parser, cors, dotenv
 
