@@ -72,7 +72,7 @@ Bibliotecas de ícones (como Font Awesome ou outra biblioteca utilizada no desig
 ---
 
 
-##🏗️ Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
 A estrutura do projeto segue o padrão do Create React App com as devidas personalizações para suportar TypeScript.
 

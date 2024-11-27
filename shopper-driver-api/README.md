@@ -153,7 +153,7 @@ Este endpoint permite que o cliente calcule a distância e o tempo estimado entr
     "routeResponse": { "google_maps_data": "response" }
 }
 ```
-###Confirmação de Viagem
+### Confirmação de Viagem
 ##### **API Endpoint:** `PATCH /ride/confirm`
 Após a estimativa, o cliente pode confirmar a viagem escolhendo um motorista disponível e fornecendo as informações necessárias, como distância, duração e valor.
 
@@ -189,7 +189,7 @@ Após a estimativa, o cliente pode confirmar a viagem escolhendo um motorista di
     "success": true
 }
 ```
-###Histórico de Viagens
+### Histórico de Viagens
 #####  **API Endpoint:** `GET /ride/{customer_id}?driver_id={id}`
 
 Este endpoint permite listar as viagens realizadas por um determinado cliente, podendo filtrar por motorista.
