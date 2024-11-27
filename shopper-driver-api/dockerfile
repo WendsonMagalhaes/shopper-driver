@@ -18,6 +18,13 @@ RUN npm install --save-dev @types/node
 
 # Instale as dependências de tipos do express, body-parser, cors, dotenv
 RUN npm install --save-dev @types/express @types/body-parser @types/cors @types/dotenv
+RUN npm install express body-parser cors dotenv
+RUN npm install --save-dev @types/express @types/body-parser @types/cors @types/dotenv typescript ts-node
+RUN npm install axios
+RUN npm install --save-dev @types/axios
+
+
+
 
 # Instale o nodemon e ts-node globalmente
 RUN npm install -g nodemon ts-node
