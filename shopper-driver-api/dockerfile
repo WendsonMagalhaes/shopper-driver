@@ -4,11 +4,14 @@ FROM node:16 AS build
 # Defina o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copie os arquivos de configuração do npm
+# Copie apenas os arquivos package*.json (evita copiar arquivos desnecessários inicialmente)
 COPY package*.json ./
 
 # Instale as dependências do projeto
 RUN npm install
+
+# Copie o restante do código fonte (após instalar as dependências para aproveitar o cache do Docker)
+COPY . .
 
 # Instale o pacote @types/node para fornecer definições de tipo para o Node.js
 RUN npm install --save-dev @types/node
@@ -19,17 +22,11 @@ RUN npm install --save-dev @types/express @types/body-parser @types/cors @types/
 # Instale o nodemon e ts-node globalmente
 RUN npm install -g nodemon ts-node
 
-# Copie o restante do código fonte
-COPY . .
-
 # Construa o projeto (caso tenha etapas de build)
 RUN npm run build
-
-# Defina o diretório de trabalho para a execução
-WORKDIR /app
 
 # Exponha a porta do seu backend
 EXPOSE 8080
 
-# Use o nodemon para rodar o servidor com ts-node
+# Defina o comando para iniciar o servidor com nodemon e ts-node
 CMD ["npm", "start"]
