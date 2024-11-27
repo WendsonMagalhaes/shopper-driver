@@ -1,0 +1,177 @@
+:root {
+    --color-primary: #17A072;
+    --color-primary-light: #64CCAC;
+    --color-background: #1E2044;
+    --color-background-light: #FAFBFB;
+    --color-text: white;
+    --color-text-dark: #1E2044;
+    --color-shadow: rgba(0, 0, 0, 0.2);
+    --color-disabled: rgba(100, 204, 172, 0.6);
+
+    --border-radius: 8px;
+    --input-padding: 20px;
+    --font-size: 16px;
+    --font-size-large: 24px;
+
+    --box-shadow: 0 4px 8px var(--color-shadow);
+
+    --transition-speed: 0.3s;
+}
+
+.driver-card {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid var(--color-primary);
+    padding: 16px;
+    border-radius: var(--border-radius);
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px;
+    box-sizing: border-box;
+    transition: transform var(--transition-speed);
+}
+
+.driver-info {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.driver-photo-driver-card {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 3px solid var(--color-primary);
+}
+
+.driver-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.driver-rating {
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+.filled-star {
+    color: var(--color-primary);
+}
+
+.empty-star {
+    color: lightgray;
+}
+
+.driver-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.car-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    position: relative;
+    padding: 16px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.car-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.vehicle-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vehicle-photo {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.vehicle-name {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-top: -10px;
+}
+
+.ride-value-container {
+    position: absolute;
+    top: 10px;
+    left: -16px;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 6px 0px;
+    font-size: 18px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    width: 40%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ride-value {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.confirm-ride {
+    display: flex;
+    justify-content: center;
+}
+
+.button-driver-card {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    padding: 10px 20px;
+    font-size: var(--font-size);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.button-driver-card:hover {
+    background-color: var(--color-primary-light);
+}
+
+.driver-card:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .driver-card {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    .button-driver-card {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

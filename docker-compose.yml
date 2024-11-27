@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api:
+    image: shopper-driver-api:latest
+    build:
+      context: ./shopper-driver-api
+      dockerfile: Dockerfile
+    command: npm run dev
+    volumes:
+      - ./shopper-driver-api:/app
+    ports:
+      - "8080:8080"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+
+  web:
+    image: shopper-driver-web:latest
+    build:
+      context: ./shopper-driver-web
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+
+    depends_on:
+      - api
+    environment:
+      - REACT_APP_GOOGLE_API_KEY=${GOOGLE_API_KEY}
+networks:
+  shopper-network:
+    driver: bridge
