@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6e490e78.css",
-    "main.js": "/static/js/main.1b952797.js",
+    "main.css": "/static/css/main.4a363ae9.css",
+    "main.js": "/static/js/main.64c2de0b.js",
     "static/js/453.48f44178.chunk.js": "/static/js/453.48f44178.chunk.js",
     "static/media/Dodge.webp": "/static/media/Dodge.d87628b3bdf29d949e4a.webp",
     "static/media/Dominic Toretto.webp": "/static/media/Dominic Toretto.1e8640f86425f9f6b191.webp",
@@ -12,12 +12,12 @@
     "static/media/car_default.webp": "/static/media/car_default.e150eac43411b8486283.webp",
     "static/media/car_driver.webp": "/static/media/car_driver.933e44f930167680fca2.webp",
     "index.html": "/index.html",
-    "main.6e490e78.css.map": "/static/css/main.6e490e78.css.map",
-    "main.1b952797.js.map": "/static/js/main.1b952797.js.map",
+    "main.4a363ae9.css.map": "/static/css/main.4a363ae9.css.map",
+    "main.64c2de0b.js.map": "/static/js/main.64c2de0b.js.map",
     "453.48f44178.chunk.js.map": "/static/js/453.48f44178.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e490e78.css",
-    "static/js/main.1b952797.js"
+    "static/css/main.4a363ae9.css",
+    "static/js/main.64c2de0b.js"
   ]
 }
