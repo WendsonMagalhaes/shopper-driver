@@ -1,29 +1,19 @@
-# Use a imagem base do Node.js
 FROM node:16 AS build
 
-# Defina o diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copie os arquivos de configuração do npm
 COPY package*.json ./
 
-# Instale as dependências do projeto
 RUN npm install
 
-# Instale o nodemon globalmente
-RUN npm install -g nodemon
+RUN npm install -g nodemon ts-node
 
-# Copie o restante do código fonte
 COPY . .
 
-# Construa o projeto (caso tenha etapas de build)
 RUN npm run build
 
-# Defina o diretório de trabalho para a execução
 WORKDIR /app
 
-# Exponha a porta do seu backend
 EXPOSE 8080
 
-# Use o nodemon para rodar o servidor com ts-node
 CMD ["nodemon", "--exec", "ts-node", "src/server.ts"]
